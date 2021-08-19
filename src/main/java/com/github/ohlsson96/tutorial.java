@@ -1,6 +1,6 @@
 package com.github.ohlsson96;
 
-import com.github.ohlsson96.common.items;
+import com.github.ohlsson96.common.tutorialItems;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -12,13 +12,12 @@ import net.minecraft.item.Items;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class tutorial implements ModInitializer {
 	
 	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
 		new Identifier("tutorial", "general"),
-		() -> new ItemStack(Blocks.COBBLESTONE));
+		() -> new ItemStack(tutorialItems.FABRIC_ITEM));
 
 		public static final ItemGroup OTHER_GROUP = FabricItemGroupBuilder.create(
 		new Identifier("tutorial", "other"))
@@ -33,7 +32,7 @@ public class tutorial implements ModInitializer {
 		.build();
 
 	// an instance of our new item
-	public static final items FABRIC_ITEM = new items(new FabricItemSettings().group(tutorial.ITEM_GROUP));	
+	public static final tutorialItems FABRIC_ITEM = new tutorialItems(new FabricItemSettings().group(tutorial.ITEM_GROUP));	
 
 	@Override
 	public void onInitialize() {
@@ -41,6 +40,6 @@ public class tutorial implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		Registry.register(Registry.ITEM, new Identifier("tutorial", "fabric_item"), FABRIC_ITEM);
+		tutorialItems.registerItems();
 	}
 }
