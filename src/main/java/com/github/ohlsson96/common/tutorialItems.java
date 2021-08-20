@@ -31,13 +31,14 @@ public class tutorialItems extends Item {
     }
      
     @Override
+    //makes the items do a wool block brake sound when used
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         playerEntity.playSound(SoundEvents.BLOCK_WOOL_BREAK, 1.0F, 1.0F);
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        // default white text
+        // adds a tooltip to the item
         tooltip.add( new TranslatableText("item.tutorial.fabric_item.tooltip") );
     }
 }

@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "WWW",
+      "WR ",
+      "WWW"
+    ],
+    "key": {
+      "W": {
+        "item": "minecraft:paper"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "tutorial:fabric_item",
+      "count": 4
+    }
+  }
+

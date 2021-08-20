@@ -1,6 +1,6 @@
 {
     "item.tutorial.fabric_item": "Fabric Item",
-    "item.tutorial.fabric_item.tooltip": "An item",
+    "item.tutorial.fabric_item.tooltip": "An item for a code tutorial",
     "itemGroup.tutorial.general": "Code tutorial"
 }
 
